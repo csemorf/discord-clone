@@ -1,8 +1,7 @@
 import { db } from "@/lib/db";
 import { log } from "console";
-import { auth, currentUser, redirectToSignIn } from "@clerk/nextjs";
+import { currentUser, redirectToSignIn } from "@clerk/nextjs";
 
-import { redirect } from "next/navigation";
 const returnBackUrl = "http://localhost:3000/sign-in";
 
 export const initialProfile = async () => {
@@ -17,6 +16,7 @@ export const initialProfile = async () => {
       userId: user.id,
     },
   });
+
   if (profile) return profile;
 
   const newProfile = await db.profile.create({

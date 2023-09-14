@@ -1,7 +1,7 @@
+import InitialModel from "@/components/models/initial-model";
 import { db } from "@/lib/db";
 import { initialProfile } from "@/lib/initialProfile";
-import { UserButton, auth, currentUser } from "@clerk/nextjs";
-import { log } from "console";
+import { UserButton } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 const SetupPage = async () => {
@@ -21,8 +21,7 @@ const SetupPage = async () => {
 
   return (
     <div>
-      <UserButton afterSignOutUrl="/sign-in" />
-      Create a server
+      <InitialModel></InitialModel>
     </div>
   );
 };
