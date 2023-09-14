@@ -70,21 +70,24 @@ const InitialModel = () => {
         </DialogHeader>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
-            <div className="space-y-8 px-6">
+            <div className="space-y-8 px-6 py-6">
               <div className="flex items-center text-center justify-center">
-                <FileUpload />
+                <FormField
+                  control={form.control}
+                  name="imageUrl"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <FileUpload
+                          endpoint="serverImage"
+                          value={field.value}
+                          onChange={field.onChange}
+                        />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                ></FormField>
               </div>
-              <FormField
-                control={form.control}
-                name="imageUrl"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <FileUpload />
-                    </FormControl>
-                  </FormItem>
-                )}
-              ></FormField>
               <FormField
                 control={form.control}
                 name="name"
