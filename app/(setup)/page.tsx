@@ -1,6 +1,6 @@
 import InitialModel from "@/components/models/initial-model";
 import { db } from "@/lib/db";
-import { initialProfile } from "@/lib/initialProfile";
+import { initialProfile } from "@/lib/initial-profile";
 import { UserButton } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
