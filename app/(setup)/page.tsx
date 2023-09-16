@@ -5,7 +5,7 @@ import { UserButton } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 const SetupPage = async () => {
-  const profile = await initialProfile();
+  const profile = await initialProfile(); //-->profile.create 
 
   const server = await db.server.findFirst({
     where: {
@@ -16,12 +16,12 @@ const SetupPage = async () => {
       },
     },
   });
-
   if (server) redirect(`servers/${server.id}`);
 
   return (
     <div>
-      <InitialModel></InitialModel>
+      <InitialModel></InitialModel> 
+      {/* --->servers.create  */}
     </div>
   );
 };
