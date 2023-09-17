@@ -26,4 +26,4 @@ const SetupPage = async () => {
 
 export default SetupPage;
 
-// DATABASE_URL='mysql://m7gimlkk4doa2ld0dxua:pscale_pw_iID3PAsCvCthnC2AhpTKNfzwcRr7GlX89OBM4uOODKx@aws.connect.psdb.cloud/ertyeyrt?sslaccept=strict'
+//xnzgljnukyuzlocyod4p:pscale_pw_YBka3QGl8P1fRCtbwx7kgcVwllXCeXPSuSNxgM3iBep@aws.connect.psdb.cloud/ertyeyrt?sslaccept=strict'
