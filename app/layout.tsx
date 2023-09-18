@@ -1,4 +1,3 @@
-
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import type { Metadata } from "next";
@@ -29,7 +28,7 @@ export default function RootLayout({
             storageKey="discord-theme"
             enableSystem={false}
           >
-            <ModalProvider/>
+            <ModalProvider />
             {children}
           </ThemeProvider>
         </body>
