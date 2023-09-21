@@ -18,7 +18,7 @@ export const NavigationItem = ({ id, name, imageUrl }: NavigationItemProps) => {
     router.push(`/servers/${id}`);
   };
   return (
-    <div>
+    <div className="my-2">
       <ActionToolTip label={name} align="center" side="right">
         <button onClick={onClick} className="group flex items-center relative">
           <div

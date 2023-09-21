@@ -19,6 +19,10 @@
 
 .env
 .env.local
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 
 # misc
 .DS_Store

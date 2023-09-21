@@ -8,7 +8,7 @@ export const initialProfile = async () => {
   const user = await currentUser();
 
   if (!user) {
-    return redirectToSignIn({ returnBackUrl });
+    return redirectToSignIn();
   }
     
   const profile = await db.profile.findUnique({
