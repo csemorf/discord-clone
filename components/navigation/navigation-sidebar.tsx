@@ -4,9 +4,9 @@ import { redirect } from "next/navigation";
 import { NavigationAction } from "./navigation-action";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "../ui/scroll-area";
-import { NavigationItem } from "@/components/navigation/navigation-item";
 import { ModeToggle } from "../mode-toggle";
 import { UserButton } from "@clerk/nextjs";
+import { NavigationItem } from "./navigation-item";
 
 export const NavigationSidebar = async () => {
   const profile = await currentProfile();
