@@ -1,9 +1,9 @@
 import { currentProfile } from "@/lib/current-profile";
 import { db } from "@/lib/db";
 import { ChannelType } from "@prisma/client";
-import { profile } from "console";
 import { redirect } from "next/navigation";
 import ServerHeader from "./server-header";
+
 interface ServerSidebarProps {
   serverId: string;
 }

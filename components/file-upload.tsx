@@ -19,6 +19,7 @@ export const FileUpload = ({ endpoint, onChange, value }: FileUploadProps) => {
       <div className="relative h-20 w-20">
         <Image fill src={value} alt="Upload" className="rounded-full"></Image>
         <button
+          onClick={() => onChange("")}
           className="absolute top-0 right-0 p-1 bg-rose-500 text-white rounded-full shadow-sm"
           type="button"
         >

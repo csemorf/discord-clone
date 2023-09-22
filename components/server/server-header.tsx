@@ -31,7 +31,7 @@ const ServerHeader = ({ role, server }: ServerHeaderProps) => {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
+      <DropdownMenuTrigger className="focus:outline-none" asChild>
         <button className="border-b-2 font-semibold w-full h-12 px-2 flex items-center border-neutral-200 dark:border-neutral-800 hover:bg-zinc-700/10 text-lg dark:hover:bg-zinc-700/50 transition">
           {server.name}
           <ChevronDown className="w-5 h-5 ml-auto"></ChevronDown>
@@ -57,13 +57,19 @@ const ServerHeader = ({ role, server }: ServerHeaderProps) => {
           </DropdownMenuItem>
         )}
         {isModerator && (
-          <DropdownMenuItem className="cursor-pointer text-lg px-3 py-2 ">
+          <DropdownMenuItem
+            onClick={() => onOpen("members", { server })}
+            className="cursor-pointer text-lg px-3 py-2"
+          >
             Managers Members
             <Users className="ml-auto w-4 h-4"></Users>
           </DropdownMenuItem>
         )}
         {isModerator && (
-          <DropdownMenuItem className="cursor-pointer text-lg px-3 py-2 ">
+          <DropdownMenuItem
+            className="cursor-pointer text-lg px-3 py-2 "
+            onClick={() => onOpen("createChannel", { server })}
+          >
             Create Channel
             <PlusCircle className="ml-auto w-4 h-4"></PlusCircle>
           </DropdownMenuItem>

@@ -28,11 +28,13 @@ export const NavigationSidebar = async () => {
 
       <ScrollArea className="w-full flex-1">
         {servers.map((server) => (
-          <NavigationItem
-            id={server.id}
-            name={server.name}
-            imageUrl={server.imageUrl}
-          />
+          <div className="mb-4" id={server.id}>
+            <NavigationItem
+              id={server.id}
+              name={server.name}
+              imageUrl={server.imageUrl}
+            />
+          </div>
         ))}
       </ScrollArea>
       <div className="pb-3 gap-y-4 mt-auto flex flex-col items-center">
